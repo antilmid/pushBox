@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .ground{
+            padding: 5vh 15vw;
+            font-size: 0;
+            width: 60%;
+        }
+        .block{
+            display: inline-block;
+            height: 4.61vw;
+            width: 7.69%;
+            box-sizing: border-box;
+            border-bottom: 1px #000 solid;
+            border-right: 1px #555 solid;
+            background-image: url(img/地板.svg);
+            background-size: 100%;
+        }
+        .block.player{
+            background-image: url(img/玩家.svg);
+        }
+        .block.hole{
+            background-image: url(img/箱子洞.svg);
+        }
+        .block.wall{
+            background-image: url(img/铁墙.svg);
+        }
+        .block.box{
+            background-image: url(img/箱子.svg);
+        }
+        #tips{
+            font-size: 30px;
+            width: 100%;
+            text-align: center;
+            height: 10vh;
+        }
+        /* .block[firstline]{
+            border-top: 1px #555 solid;
+        }
+        .block[first]{
+            border-left: 1px #555 solid;
+        } */
+    </style>
+    <script>
+        var len = window.innerHeight < window.innerWidth?window.innerHeight:window.innerWidth;
+    </script>
+</head>
+<body>
+    <div id="tips">
+
+    </div>
+    <div class="ground">
+        <!-- one -->
+        <span class="block" firstline first></span>
+        <span class="block" firstline></span>
+        <span class="block" firstline></span>
+        <span class="block" firstline></span>
+        <span class="block" firstline></span>
+        <span class="block" firstline></span>
+        <span class="block" firstline></span>
+        <span class="block" firstline></span>
+        <span class="block" firstline></span>
+        <span class="block" firstline></span>
+        <span class="block" firstline></span>
+        <span class="block" firstline></span>
+        <span class="block" firstline></span>
+        <!-- 2 -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <!-- 3 -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <!-- 4 -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <!-- 5 -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <!-- 6 -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <!-- 7 -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <!-- 8  -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <!-- 9 -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <!-- 10 -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <!-- 11 -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <!-- 12 -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <!-- 13 -->
+        <span class="block" first></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+        <span class="block"></span>
+    </div>
+
+    <script>
+        // 初始化JS
+        var ground = document.getElementsByClassName("ground")[0];
+        var block = document.getElementsByClassName("block");
+        var gesture = { // 手势
+            x:0,
+            y:0
+        }
+        // ground.style.width = len + "px";
+        
+        
+    </script>
+    <script src="./index.js"></script>
+    <script>
+        // 电脑兼容
+        document.onmousedown = function(e) {
+            e.preventDefault();
+            gesture.x = e.screenX;
+            gesture.y = e.screenY;
+        }
+        document.onmouseup = function(e) {
+            var dx = e.screenX - gesture.x;
+            var dy = e.screenY - gesture.y;
+            e.preventDefault();
+            if(dx*dx > dy*dy && dx > 0){
+                player.move("right");
+            }
+            if(dx*dx > dy*dy && dx < 0){
+                player.move("left");
+            }
+            if(dx*dx < dy*dy && dy > 0){
+                player.move("down");
+            }
+            if(dx*dx < dy*dy && dy < 0){
+                player.move("up");
+            }
+        }
+        // 手机兼容
+        document.ontouchstart = function(e) {
+            gesture.x = e.changedTouches[0].screenX;
+            gesture.y = e.changedTouches[0].screenY;
+        }
+        document.ontouchend = function(e) {
+            var dx = e.changedTouches[0].screenX - gesture.x;
+            var dy = e.changedTouches[0].screenY - gesture.y;
+            if(dx*dx > dy*dy && dx > 0){
+                player.move("right");
+            }
+            if(dx*dx > dy*dy && dx < 0){
+                player.move("left");
+            }
+            if(dx*dx < dy*dy && dy > 0){
+                player.move("down");
+            }
+            if(dx*dx < dy*dy && dy < 0){
+                player.move("up");
+            }
+        }
+
+
+    </script>
+</body>
+</html>
